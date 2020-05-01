@@ -29,7 +29,7 @@ export const fetchPost = id => async dispatch => {
 }
 
 export const deletePost = id => async dispatch => {
-    const response = await axios.delete(`${ROOT_URL}/posts/${id}?${API_KEY}`)
+    await axios.delete(`${ROOT_URL}/posts/${id}?${API_KEY}`)
     dispatch({ type: DELETE_POST, payload: id });
 }
 
